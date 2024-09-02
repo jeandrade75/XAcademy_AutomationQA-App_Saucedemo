@@ -1,6 +1,6 @@
 describe ('Casos de prueba en Saucedemo', () => {
 
-    //Acceder al website www.saucedemo.com
+    // Acceder al website www.saucedemo.com
     it('Saucedemo testing : flujos compra --> standard_user', () => {
         cy.visit('https://www.saucedemo.com/');
 
@@ -18,7 +18,7 @@ describe ('Casos de prueba en Saucedemo', () => {
         cy.get('.item_pricebar > .btn_secondary').should('exist');
         cy.wait(500);
 
-        cy.get('.btn_action').click(); //Haga clic en el botón de pago y verifique los pasos
+        cy.get('.btn_action').click(); //Haga click en el botón de pago y verifique los pasos
         cy.get('[data-test="firstName"]').type('Gabriela'); //Rellene el nombre, el apellido y el código postal
         cy.wait(500);
         cy.get('[data-test="lastName"]').type('Mendez');
