@@ -1,7 +1,5 @@
 # 🛒 SauceDemo - Plataforma de Compras en Línea
 
-![SauceDemo Logo](https://www.saucedemo.com/static/media/logo3x.7e5500cf.png)
-
 ## 📄 Descripción
 
 **SauceDemo** es una plataforma de pruebas diseñada para demostrar diferentes escenarios en un entorno de comercio electrónico. Aquí, los usuarios pueden iniciar sesión con varios perfiles, agregar productos al carrito, y realizar simulaciones de compra. Es una excelente herramienta para realizar pruebas de automatización y validación de aplicaciones web.
@@ -28,17 +26,6 @@ A continuación, se proporcionan algunos usuarios de prueba que puedes utilizar 
 
 La contraseña para todos los usuarios es: `secret_sauce`.
 
-## 📸 Capturas de Pantalla
-
-### Página de Inicio de Sesión
-![Login Page](https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.34e7aa42.jpg)
-
-### Página de Productos
-![Inventory Page](https://www.saucedemo.com/static/media/bolt-shirt-1200x1500.c0dae290.jpg)
-
-### Proceso de Checkout
-![Checkout Page](https://www.saucedemo.com/static/media/red-onesie-1200x1500.ec61476e.jpg)
-
 ## 🛠️ Tecnologías Utilizadas
 
 - **Frontend**: HTML5, CSS3, JavaScript
@@ -55,14 +42,16 @@ Para usar esta plataforma con fines de prueba, simplemente sigue estos pasos:
 
 2. Navega al directorio del proyecto.
    ```bash
-cd saucedemo
+   cd saucedemo
+
 
 3. Abre index.html en tu navegador para comenzar.
 
 ## 🔍 Pruebas y Automatización
 SauceDemo es ideal para pruebas de automatización. Puedes usar Cypress, Selenium, u otras herramientas de prueba para simular el proceso de compra. Aquí tienes un ejemplo simple con Cypress:
 
-describe('Prueba de Login', () => {
+   ```bash
+   describe('Prueba de Login', () => {
   it('Debería iniciar sesión correctamente con standard_user', () => {
     cy.visit('https://www.saucedemo.com/');
     cy.get('#user-name').type('standard_user');
@@ -71,3 +60,4 @@ describe('Prueba de Login', () => {
     cy.url().should('include', '/inventory.html');
   });
 });
+
